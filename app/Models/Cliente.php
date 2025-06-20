@@ -10,7 +10,7 @@ class Cliente extends Model
     use  HasFactory;
 
     protected $fillable = [
-        'cedula',
+        'dni',
         'apellido',
         'nombre',
         'latitud',

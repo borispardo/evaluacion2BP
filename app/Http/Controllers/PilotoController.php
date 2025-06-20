@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Predio;
+use App\Models\Piloto;
 
-class PredioController extends Controller
+class PilotoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class PredioController extends Controller
     public function index()
     {
         //Obteniendo todos los predios de la base de datos
-        $predios = Predio::all();
+        $pilotos = Piloto::all();
         //Renderizando la vista con los predios
-        return view('predios.index', compact('predios'));
+        return view('pilotos.index', compact('pilotos'));
     }
 
     /**
@@ -25,7 +25,7 @@ class PredioController extends Controller
     public function create()
     {
         //Renderizando el formulario para crear un nuevo predio
-        return view('predios.nuevo');
+        return view('pilotos.nuevo');
     }
 
     /**
@@ -44,8 +44,8 @@ class PredioController extends Controller
             'longitud3' => $request->longitud3,
         ];
         //Guardando los datos en la base de datos
-        Predio::create($datos);
-        return redirect()->route('predios.index')->with('success', 'Predio creado exitosamente');
+        Piloto::create($datos);
+        return redirect()->route('pilotos.index')->with('success', 'Piloto creado exitosamente');
     }
 
     /**
@@ -61,8 +61,8 @@ class PredioController extends Controller
      */
     public function edit(string $id)
     {
-        $predio = Predio::findOrFail($id);
-        return view('predios.editar', compact('predio'));
+        $piloto = Piloto::findOrFail($id);
+        return view('pilotos.editar', compact('piloto'));
     }
 
     /**
@@ -70,8 +70,8 @@ class PredioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $predio = Predio::findOrFail($id);
-        $predio->update([
+        $piloto = Piloto::findOrFail($id);
+        $piloto->update([
             'dni' => $request->dni,
             'nombre' => $request->nombre,
             'latitud1' => $request->latitud1,
@@ -81,7 +81,7 @@ class PredioController extends Controller
             'latitud3' => $request->latitud3,
             'longitud3' => $request->longitud3,
         ]);
-        return redirect()->route('predios.index')->with('success', 'Predio actualizado exitosamente');
+        return redirect()->route('pilotos.index')->with('success', 'Piloto actualizado exitosamente');
 
     }
 
@@ -90,8 +90,8 @@ class PredioController extends Controller
      */
     public function destroy(string $id)
     {
-        $predio = Predio::findOrFail($id);
-        $predio->delete();
-        return redirect()->route('predios.index')->with('success', 'Predio eliminado exitosamente');
+        $piloto = Piloto::findOrFail($id);
+        $piloto->delete();
+        return redirect()->route('pilotos.index')->with('success', 'Piloto eliminado exitosamente');
     }
 }
