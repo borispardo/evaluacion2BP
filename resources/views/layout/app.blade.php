@@ -59,7 +59,6 @@
                     <div class="navbar-nav ms-auto">
                         <a href="{{ url('/') }}" class="nav-item nav-link active"></a>
                         <a href="{{ route('clientes.index') }}" class="nav-item nav-link">Clientes</a>
-                        <a href="{{ route('predios.index') }}" class="nav-item nav-link">Predios</a>
 
                         <a href="{{ url('clientes/mapa') }}" class="nav-item nav-link">Mapa de Clientes</a>
                        

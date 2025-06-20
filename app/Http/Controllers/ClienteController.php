@@ -50,11 +50,12 @@ class ClienteController extends Controller
     {
         // Capturar valores y almacenarlos en la base de datos
         $datos =[
-            'cedula' => $request->cedula,
+            'dni' => $request->dni,
             'apellido' => $request->apellido,
             'nombre' => $request->nombre,
             'latitud' => $request->latitud,
             'longitud' => $request->longitud,
+            'hora' => $request->hora,
         ];
         Cliente::create($datos);
         return redirect()->route('clientes.index') ->with('message', 'Cliente creado correctamente');
@@ -86,11 +87,12 @@ class ClienteController extends Controller
     {
         //
         $cliente = Cliente::find($id);
-        $cliente->cedula = $request->cedula;
+        $cliente->dni = $request->dni;
         $cliente->apellido = $request->apellido;
         $cliente->nombre = $request->nombre;
         $cliente->latitud = $request->latitud;
         $cliente->longitud = $request->longitud;
+        $cliente->hora = $request->hora;
         $cliente->save();
         return redirect()->route('clientes.index') ->with('message', 'Cliente editado correctamente');
 
