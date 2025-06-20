@@ -34,16 +34,14 @@ class PredioController extends Controller
     public function store(Request $request)
     {
         $datos = [
-            'propietario' => $request->propietario,
-            'clave' => $request->clave,
+            'dni' => $request->dni,
+            'nombre' => $request->nombre,
             'latitud1' => $request->latitud1,
             'longitud1' => $request->longitud1,
             'latitud2' => $request->latitud2,
             'longitud2' => $request->longitud2,
             'latitud3' => $request->latitud3,
             'longitud3' => $request->longitud3,
-            'latitud4' => $request->latitud4,
-            'longitud4' => $request->longitud4,
         ];
         //Guardando los datos en la base de datos
         Predio::create($datos);
@@ -74,16 +72,14 @@ class PredioController extends Controller
     {
         $predio = Predio::findOrFail($id);
         $predio->update([
-            'propietario' => $request->propietario,
-            'clave' => $request->clave,
+            'dni' => $request->dni,
+            'nombre' => $request->nombre,
             'latitud1' => $request->latitud1,
             'longitud1' => $request->longitud1,
             'latitud2' => $request->latitud2,
             'longitud2' => $request->longitud2,
             'latitud3' => $request->latitud3,
             'longitud3' => $request->longitud3,
-            'latitud4' => $request->latitud4,
-            'longitud4' => $request->longitud4,
         ]);
         return redirect()->route('predios.index')->with('success', 'Predio actualizado exitosamente');
 
