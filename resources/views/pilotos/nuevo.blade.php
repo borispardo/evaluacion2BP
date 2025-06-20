@@ -5,18 +5,18 @@
 <div class='row'>
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <form action="{{ route('predios.store') }}" method="POST">
+        <form action="{{ route('pilotos.store') }}" method="POST">
             @csrf
             <br>
-            <h3><b>Registrar Nuevo Predio</b></h3>
+            <h3><b>Registrar Nuevo Piloto</b></h3>
             <hr>
-            <label for=""><b>Propietario:</b> </label> <br>
-            <input type="text" name="propietario"
-               id="propietario" placeholder="Ingrese ..."
+            <label for=""><b>DNI:</b> </label> <br>
+            <input type="text" name="dni"
+               id="dni" placeholder="Ingrese ..."
                required class="form-control"> <br> 
-            <label for=""><b>Clave Castral:</b></label>        
-            <input type="number" name="clave" id="clave"
-            placeholder="Ingrese la clave catastral"
+            <label for=""><b>Nombre:</b></label>        
+            <input type="number" name="nombre" id="nombre"
+            placeholder="Ingrese el nombre"
             class="form-control"> <br>
             <div class="row">
                 <div class="col-md-5">
@@ -88,7 +88,7 @@
                     Guardar
                 </button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="{{ route('predios.index') }}" class="btn btn-secondary">Cancelar</a>
+                <a href="{{ route('pilotos.index') }}" class="btn btn-secondary">Cancelar</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="reset" class="btn btn-danger">
                     Limpiar
@@ -96,7 +96,7 @@
                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="button" class="btn btn-primary" 
                     onclick="graficarPredio();">
-                    Graficar Predio
+                    Graficar Vuelo
                 </button>
             </center>
         </form>
