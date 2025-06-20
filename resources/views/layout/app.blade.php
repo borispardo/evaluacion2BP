@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Makaan - Inmobiliaria</title>
+    <title>Vuelos BP</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Favicon -->
@@ -50,7 +50,7 @@
                     <div class="icon p-2 me-2">
                         <img class="img-fluid" src="{{ asset('real/img/icon-deal.png') }}" alt="Icon" style="width: 30px; height: 30px;">
                     </div>
-                    <h1 class="m-0 text-primary">Boris Pardo - GEO</h1>
+                    <h1 class="m-0 text-primary">VUELOS BP</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
