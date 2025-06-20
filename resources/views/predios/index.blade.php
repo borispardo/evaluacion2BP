@@ -20,7 +20,6 @@
                         <th>Coordenada N°1</th>
                         <th>Coordenada N°2</th>
                         <th>Coordenada N°3</th>
-                        <th>Coordenada N°4</th>
                         <th class="text-center">Acciones</th>
                     </tr>
                 </thead>
@@ -32,7 +31,6 @@
                         <td>Latitud: {{ $predioTemporal->latitud1 }}<br>Longitud: {{ $predioTemporal->longitud1 }}</td>
                         <td>Latitud: {{ $predioTemporal->latitud2 }}<br>Longitud: {{ $predioTemporal->longitud2 }}</td>
                         <td>Latitud: {{ $predioTemporal->latitud3 }}<br>Longitud: {{ $predioTemporal->longitud3 }}</td>
-                        <td>Latitud: {{ $predioTemporal->latitud4 }}<br>Longitud: {{ $predioTemporal->longitud4 }}</td>
                         <td class="text-center">
                             <a href="{{ route('predios.edit', $predioTemporal->id) }}" class="btn btn-sm btn-primary me-1">Editar</a>
                             <form action="{{ route('predios.destroy', $predioTemporal->id) }}" method="POST" class="d-inline">

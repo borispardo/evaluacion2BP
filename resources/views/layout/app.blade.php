@@ -7,7 +7,6 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Favicon -->
-     
     <link href="{{ asset('real/img/favicon.ico') }}" rel="icon">
 
     <!-- Google Fonts -->
@@ -30,6 +29,34 @@
     <!-- Main CSS -->
     <link href="{{ asset('real/css/style.css') }}" rel="stylesheet">
 
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            background-color: #f0fbff;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #007BFF !important;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #00bcd4 !important;
+        }
+
+        .btn-info {
+            background-color: #00bcd4;
+            border-color: #00acc1;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: #007BFF;
+        }
+
+        .navbar {
+            background-color: #e0f7fa !important;
+        }
+    </style>
+
     @stack('styles')
 </head>
 
@@ -45,31 +72,27 @@
 
         <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+            <nav class="navbar navbar-expand-lg navbar-light py-0 px-4">
                 <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center text-center">
                     <div class="icon p-2 me-2">
                         <img class="img-fluid" src="{{ asset('real/img/icon-deal.png') }}" alt="Icon" style="width: 30px; height: 30px;">
                     </div>
-                    <h1 class="m-0 text-primary">VUELOS BP</h1>
+                    <h1 class="m-0">VUELOS BP</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="{{ url('/') }}" class="nav-item nav-link active"></a>
+                        <a href="{{ url('/') }}" class="nav-item nav-link">Inicio</a>
                         <a href="{{ route('clientes.index') }}" class="nav-item nav-link">Clientes</a>
-
+                        <a href="{{ route('pilotos.index') }}" class="nav-item nav-link">Pilotos</a>
                         <a href="{{ url('clientes/mapa') }}" class="nav-item nav-link">Mapa de Clientes</a>
-                       
-                        
-
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('predios/create')}}">Registrar Predio</a>
-                        </li>  
-                        
+                            <a class="nav-link" href="{{ url('pilotos/create') }}">Registrar Predio</a>
+                        </li>
                     </div>
-                    <a href="#" class="btn btn-primary px-3 d-none d-lg-flex">Agregar Propiedad</a>
+                    <a href="#" class="btn btn-info px-3 d-none d-lg-flex">Agregar Propiedad</a>
                 </div>
             </nav>
         </div>
@@ -117,7 +140,7 @@
         <!-- Footer End -->
 
         <!-- Botón subir -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-info btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JS -->
