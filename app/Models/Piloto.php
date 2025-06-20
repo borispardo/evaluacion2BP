@@ -10,15 +10,13 @@ class Predio extends Model
     //
     use HasFactory;
     protected $fillable = [
-        'propietario',
-        'clave',
+        'dni',
+        'nombre',
         'latitud1',
         'longitud1',
         'latitud2',
         'longitud2',
         'latitud3',
-        'longitud3',
-        'latitud4',
-        'longitud4'
+        'longitud3'
     ];
 }
